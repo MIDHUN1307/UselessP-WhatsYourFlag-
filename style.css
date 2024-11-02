@@ -1,0 +1,137 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a dark, elegant background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Prevent scrollbars from appearing due to floating hearts */
+    position: relative;
+}
+
+/* Add the heart background image */
+body::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://example.com/heart-image.png'); /* Replace with the actual path to your heart image */
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.1; /* Light opacity for subtle effect */
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+/* Floating hearts animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    top: 100vh;
+    width: 20px; /* Adjust size of hearts */
+    height: 20px; /* Adjust size of hearts */
+    background: url('https://example.com/small-heart.png') no-repeat center; /* Replace with the actual path to your small heart image */
+    background-size: cover;
+    animation: float linear infinite;
+    animation-duration: 5s; /* Duration of the floating */
+}
+
+/* Container styling for the assessment */
+#app {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 2em;
+    border-radius: 8px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    font-size: 2.2em;
+    color: #ff6b6b;
+    margin-bottom: 1em;
+}
+
+#question-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+#result-container h2 {
+    font-size: 1.8em;
+    color: #ff6b6b;
+    margin-bottom: 0.5em;
+}
+
+/* Style for question and options */
+.option-button {
+    display: block;
+    width: 100%;
+    padding: 0.8em;
+    margin: 0.5em 0;
+    font-size: 1em;
+    background-color: #333;
+    color: #ff6b6b;
+    border: 2px solid #ff6b6b;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.option-button:hover {
+    background-color: #ff6b6b;
+    color: #121212;
+}
+
+/* Style for result text and concern text */
+#result-text {
+    font-size: 1.2em;
+    color: #ffffff;
+    margin: 1em 0;
+}
+
+#concern-text {
+    color: #ff6b6b;
+    font-size: 1em;
+    margin-top: 1em;
+    text-align: left;
+}
+
+/* Score and result styling */
+#score {
+    font-size: 1.5em;
+    margin-top: 1em;
+    color: #ffdd57;
+}
+
+/* Generate hearts randomly */
+@media screen {
+    .heart {
+        left: calc(100% * var(--random-left));
+        animation-duration: calc(5s + var(--random-duration));
+        animation-delay: calc(-1s * var(--random-delay));
+    }
+}
