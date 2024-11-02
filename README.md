@@ -18,6 +18,8 @@ Example Questions How does your date treat service staff? How does your date han
 
 Scoring System Each question has four possible responses, scored from 0 to 5 points. The maximum score is 100 points (20 questions x 5 points). Based on the total score, users receive a classification: 80% and above: Strong Green Flag 60% to 79%: Mild Green Flag 40% to 59%: Caution Below 40%: Red Flag
 
+Video Tutorial: https://github.com/VINAYAK28x/UselessP-WhatsYourFlag-/blob/main/1000065766.mp4
+
 Contributing Contributions are welcome! If you have suggestions for improvements or additional questions, feel free to submit a pull request or open an issue.
 
 License This project is licensed under the MIT License - see the LICENSE file for details.
