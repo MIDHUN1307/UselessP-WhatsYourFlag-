@@ -1,3 +1,4 @@
+
 // script.js
 const questions = [
     {
@@ -262,6 +263,10 @@ function createHeart() {
 // Create hearts at intervals
 setInterval(createHeart, 1000); // Create a new heart every second
 
-
+document.getElementById("start-button").onclick = function() {
+    document.getElementById("cover-page").style.display = "none"; // Hide the cover page
+    document.getElementById("question-container").style.display = "block"; // Show the question container
+    loadQuestion(); // Load the first question
+};
 // Load the first question on page load
 window.onload = loadQuestion;
