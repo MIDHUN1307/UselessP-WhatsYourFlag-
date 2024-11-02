@@ -168,3 +168,35 @@ h1 {
     background-color: #ff4444; /* Darker shade on hover */
 }
 }
+/* Cover page styling */
+#cover-page {
+    text-align: center;
+    padding: 4em 0;
+}
+
+#cover-page h1 {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+    color: #ff6b6b;
+}
+
+#cover-page p {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    color: #ffffff;
+}
+
+#start-button {
+    padding: 1em 2em;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#start-button:hover {
+    background-color: #ff4444; /* Darker shade on hover */
+}
