@@ -224,19 +224,20 @@ function showResults() {
     const resultTextElement = document.getElementById("result-text");
     let resultText = "";
     if (percentage >= 80) {
-        resultText = "🟢 Strong Green Flag: This person shows very healthy relationship behaviors!";
+          resultText = "🟢Strong Green Flag: You're living in a rom-com! Your date is a perfect mix of charm and adventure, like a spontaneous road trip with your favorite playlist! Just be ready for surprise picnics and cheesy love notes! 🍕💌";
         resultTextElement.className = "strong-green";
     } else if (percentage >= 60) {
-        resultText = "🟡 Mild Green Flag: Generally positive traits, but some areas could use attention.";
+        resultText = "🟡 Mild Green Flag: A decent choice! Just remember to negotiate over pizza toppings or it might get messy!";
         resultTextElement.className = "mild-green";
     } else if (percentage >= 40) {
-        resultText = "🟠 Caution: Several concerning behaviors present. Proceed with awareness.";
+        resultText = "🟠 Caution: Think of it like dating a cat; adorable, but will probably ignore you until they're hungry!";
         resultTextElement.className = "caution";
     } else {
-        resultText = "🔴 Red Flag: Significant concerning behaviors. Carefully consider this relationship.";
+        resultText = "🔴 Red Flag: This is not a drill! Time to channel your inner Usain Bolt and run like your favorite Netflix series just got canceled!";
         resultTextElement.className = "red-flag";
         document.getElementById("concern-text").style.display = "block";
     }
+
 
     resultTextElement.textContent = resultText;
 }
